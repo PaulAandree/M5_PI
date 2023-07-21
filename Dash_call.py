@@ -30,6 +30,8 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #3f6
 </style>
 """
 
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 sns.set_theme(style="darkgrid")
 
 # Assuming you have a DataFrame named 'df' with a 'date' and 'priority' column
