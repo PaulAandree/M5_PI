@@ -6,7 +6,7 @@ import altair as alt
 sns.set_theme(style="darkgrid")
 
 # Assuming you have a DataFrame named 'df' with a 'date' and 'priority' column
-df = pd.read_csv(r'E:\\___DATASCIENCE\\___Data Science_henry\\M5\\M5\\Proyecto Integrador\\1 Call Center\\call_2.csv')
+df = pd.read_csv('call.csv')
 
 # Convert the 'date' column to datetime
 df['date'] = pd.to_datetime(df['date'])
