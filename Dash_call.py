@@ -3,6 +3,33 @@ import streamlit as st
 import seaborn as sns
 import altair as alt
 
+css='''
+[data-testid="metric-container"] {
+    width: fit-content;
+    margin: auto;
+}
+
+[data-testid="metric-container"] > div {
+    width: fit-content;
+    margin: auto;
+}
+
+[data-testid="metric-container"] label {
+    width: fit-content;
+    margin: auto;
+}
+'''
+
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-color: #3f6e64;
+opacity: 0.8;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #3f6e64 8px ), repeating-linear-gradient( #0e0f2d55, #0e0f2d );
+}
+</style>
+"""
+
 sns.set_theme(style="darkgrid")
 
 # Assuming you have a DataFrame named 'df' with a 'date' and 'priority' column
@@ -297,3 +324,4 @@ with b2:
     if filter_by_server:
         st.metric(label = "Agent's productivity", value="{:.2f} %".format(productivity) )
     
+st.markdown(f'<style>{css}</style>',unsafe_allow_html=True)
